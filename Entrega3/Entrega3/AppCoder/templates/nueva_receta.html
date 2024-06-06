@@ -1,0 +1,19 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'nueva receta' %}" method="post">{% csrf_token %}
+
+    <h1>Crea una nueva receta</h1>
+
+    <p>Nombre Receta: <input type="text" name="nombre"></p>
+
+    <p>Ingredientes: <input type="number" name="ingredientes"></p>
+
+    <button type="submit">Agregar</button>
+
+</form>
+
+
+{% endblock contenidoQueCambia %}

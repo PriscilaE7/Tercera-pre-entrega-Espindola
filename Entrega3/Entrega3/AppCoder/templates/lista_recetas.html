@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<h1>Todas tus Recetas</h1>
+
+<ul>
+    {% for nueva_receta in lista_recetas %}
+    <li>{{ nueva_receta.nombre }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock contenidoQueCambia %}

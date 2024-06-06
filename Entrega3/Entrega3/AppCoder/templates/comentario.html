@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'comentario' %}" method="post">{% csrf_token %}
+
+    <p><label>Nombre:</label>
+    <input type="text" name="nombre_de_usuario" placeholder="Nombre">
+
+    <br>
+    <label>Apellido:</label>
+    <input type="text" name="apellido_de_usuario" placeholder="Apellido">
+    <br>
+
+    <p><label>Comentario:</label></p>
+    <textarea cols="50" rows="10" name="comentario" placeholder="Ingrese comentario"></textarea>
+
+    <br>
+    <input type="submit"/>
+
+</form>
+
+
+{% endblock contenidoQueCambia %}
